@@ -24,7 +24,7 @@ input {
 }
 
 .heroes a {
-  color: #333;
+  color: coral;
   text-decoration: none;
   background-color: #EEE;
   margin: .5em;
@@ -36,12 +36,12 @@ input {
 }
 
 .heroes a:hover {
-  color: #2c3a41;
+  color: coral;
   background-color: #e6e6e6;
 }
 
 .heroes a:active {
-  background-color: #525252;
+  background-color: coral;
   color: #fafafa;
 }
 
@@ -50,7 +50,7 @@ input {
   font-size: small;
   color: white;
   padding: 0.8em 0.7em 0 0.7em;
-  background-color: #405061;
+  background-color: coral;
   line-height: 1em;
   position: relative;
   left: -1px;
@@ -70,7 +70,7 @@ input {
 
 .add-button:hover {
   color: white;
-  background-color: #42545C;
+  background-color: red;
 }
 
 button.delete {
@@ -78,13 +78,13 @@ button.delete {
   left: 210px;
   top: 5px;
   background-color: white;
-  color: #525252;
+  color: red;
   font-size: 1.1rem;
   margin: 0;
   padding: 1px 10px 3px 10px;
 }
 
 button.delete:hover {
-  background-color: #525252;
+  background-color: red;
   color: white;
 }
