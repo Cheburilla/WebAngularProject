@@ -1,35 +1,46 @@
 /* Global Styles */
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font: Roboto;
 }
+
 h1 {
   color: #264D73;
   font-size: 2.5rem;
 }
-h2, h3 {
+
+h2,
+h3 {
   color: #444;
   font-weight: lighter;
 }
+
 h3 {
   font-size: 1.3rem;
 }
+
 body {
   padding: .5rem;
   max-width: 1000px;
   margin: auto;
 }
+
 @media (min-width: 600px) {
   body {
     padding: 2rem;
   }
 }
-body, input[text] {
+
+body,
+input[text] {
   color: #333;
   font-family: Cambria, Georgia, serif;
 }
+
 a {
   cursor: pointer;
 }
+
 button {
   background-color: #eee;
   border: none;
@@ -42,10 +53,12 @@ button {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
+
 button:hover {
   background-color: black;
   color: white;
 }
+
 button:disabled {
   background-color: #eee;
   color: #aaa;
@@ -66,15 +79,18 @@ nav a {
 
 nav a:hover {
   color: white;
-  background-color:  #42545C;
+  background-color: #42545C;
 }
+
 nav a.active {
   background-color: black;
   color: white;
 }
+
 hr {
   margin: 1.5rem 0;
 }
+
 input[type="text"] {
   box-sizing: border-box;
   width: 100%;
