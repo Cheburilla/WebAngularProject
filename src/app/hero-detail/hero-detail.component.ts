@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
+import { Observable, firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-hero-detail',
@@ -11,7 +12,7 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
-  hero: Hero | undefined;
+  hero!: Observable<Hero>;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,18 +26,15 @@ export class HeroDetailComponent implements OnInit {
 
   getHero(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
-    this.heroService.getHero(id)
-      .subscribe(hero => this.hero = hero);
+    this.hero = this.heroService.getHero(id)
   }
 
   goBack(): void {
     this.location.back();
   }
 
-  save(): void {
-    if (this.hero) {
-      this.heroService.updateHero(this.hero)
-        .subscribe(() => this.goBack());
-    }
+  save(value: Hero): void {
+    this.hero = this.heroService.updateHero(value);
+    this.goBack();
   }
 }
